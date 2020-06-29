@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
 import App from './App';
 import AuthorQuiz from './components/AuthorQuiz';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 /* Below is the basic test function provided by facebook when we create the app*/
@@ -41,14 +43,21 @@ describe("Author Quiz", ()=>{
   })
 })
 
+/*----------------End of Author Quiz Component Test------------------------------------------*/
 
-/* Creating a different testing function similiar to the one provided by react*/
-test('Author Quiz Has The Word', () => {
-  const { getByText } = render(<AuthorQuiz header="ABC" />); 
+/* Creating a different testing function similiar to the one provided by react for Header and Footer*/
+test('Header Has The Word', () => {
+  const { getByText } = render(<Header header="ABC" />); 
   const linkElement = getByText("ABC");
   expect(linkElement).toBeInTheDocument();
 });
 
-/*----------------End of Author Quiz Component Test------------------------------------------*/
+test('Footer Has The Word', () => {
+  const { getByText } = render(<Footer footer="XYZ" />); 
+  const linkElement = getByText("XYZ");
+  expect(linkElement).toBeInTheDocument();
+});
 
+
+/*-------------------------End of header footer testing----------------------------------------*/
 

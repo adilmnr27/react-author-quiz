@@ -6,10 +6,8 @@ import AuthorQuiz from './components/AuthorQuiz'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <AuthorQuiz header="Author Quiz"></AuthorQuiz>
+        <AuthorQuiz></AuthorQuiz>
           Learn React
-      </header>
     </div>
   );
 }
