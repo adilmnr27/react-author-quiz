@@ -25,7 +25,15 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fb6161;
+}
+
+.turn {
+  height : 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+
 }
 
 @keyframes App-logo-spin {

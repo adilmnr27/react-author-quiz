@@ -9,13 +9,21 @@ export default function Turn(props) {
 
     var books = shuffledBooks(booksList.books);
     var book = getRandomBook(books);
+    function getHighlightColor(author){
+        if(author===book.author){
+            return "#6efb61";
+        }
+        else{
+            return "#fb6161"
+        }
+    }
 
     /* Many people suggested to use map for it. But wanted to try this out */
     var authors = () => {
         let authors = [];
         for (let i = 0; i < books.length; i++) {
             /* key needs to provided for dynamic lists */
-            authors.push(<Author author={books[i].author} key={books[i].author} />)
+            authors.push(<Author author={books[i].author} getHighlightColor={getHighlightColor} key={books[i].author} />)
         }
         return authors;
     }
