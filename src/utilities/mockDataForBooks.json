@@ -1,0 +1,65 @@
+{
+"Books":[
+    {
+        "name":"Harry Potter",
+        "author":"J.K. Rowling",
+        "image":""
+    },
+    {
+        "name":"Name of the Wind",
+        "author":"Patrick Rothfuss",
+        "image":""
+    },
+   
+    {
+        "name":"To Kill A Mocking Bird",
+        "author":"Harper Lee",
+        "image":""
+    },
+   
+    {
+        "name":"A Study in Scarlet",
+        "author":"Arthur Conan Doyle",
+        "image":""
+    },
+   
+    {
+        "name":"Percy Jackson & the Olympians series.",
+        "author":"Rick Riordan",
+        "image":""
+    },
+   
+    {
+        "name":"The Second Coming of Gluttony",
+        "author":"Ro Yu-jin",
+        "image":""
+    },
+   
+    {
+        "name":"The Adventures of Huckleberry Finn",
+        "author":"Mark Twain",
+        "image":""
+    },
+   
+    {
+        "name":"Alice's Adventures in Wonderland",
+        "author":"Lewis Carroll",
+        "image":""
+    },
+   
+    {
+        "name":"Noddy Series",
+        "author":"Enid Blyton",
+        "image":""
+    },
+   
+    {
+        "name":"Naruto Manga",
+        "author":"Masashi Kishimoto",
+        "image":""
+    }
+   
+   
+
+]
+}
