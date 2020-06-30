@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Route, BrowserRouter } from 'react-router-dom';
+import AddBook from './components/AddBook';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <Route exact path="/" component={App}></Route>
+      <Route exact path="/add-book" component={AddBook}></Route>
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

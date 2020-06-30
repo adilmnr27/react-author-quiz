@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Turn from './Turn';
+import { Link } from 'react-router-dom'
 export default function AuthorQuiz() {
 
     const header = "Author Quiz";
@@ -9,10 +10,11 @@ export default function AuthorQuiz() {
 
     return (
         <div className="container  col-10 -1">
-            <Header header={header}/>
+            <Header header={header} />
+            <Link to="/add-book" >Add a book</Link>
             <Turn />
-            <Footer footer={footer}/>
+            <Footer footer={footer} />
         </div>
-      
+
     )
 }
