@@ -1,10 +1,23 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom';
 
 /* This class could have been written with normal function as well as React has provided React hooks
 This has been written as class format for practice */
 
 /*Adding Book to the list*/
-export class AddBook extends Component {
+
+
+/* creating a wrapper as we were not able to pass props directly to the component*/
+/* withRouter used to enable history.push*/
+const AddBookWrapper = withRouter((props) => 
+    <AddBook addBook={(book) => {
+        console.log(book);
+        props.history.push("/")
+    }}/>
+
+);
+class AddBook extends Component {
+
 
 
     constructor(props) {
@@ -33,8 +46,10 @@ export class AddBook extends Component {
         */
 
     }
-    submitForm() {
-        this.preventDefault();
+
+    submitForm(event) {
+        event.preventDefault();
+        this.props.addBook(this.state);
     }
     render() {
         return (
@@ -67,4 +82,4 @@ export class AddBook extends Component {
     }
 }
 
-export default AddBook
+export { AddBookWrapper, AddBook }

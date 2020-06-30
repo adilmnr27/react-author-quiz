@@ -11,7 +11,6 @@ export default function AuthorQuiz() {
     return (
         <div className="container  col-10 -1">
             <Header header={header} />
-            <Link to="/add-book" >Add a book</Link>
             <Turn />
             <Footer footer={footer} />
         </div>
