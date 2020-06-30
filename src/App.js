@@ -5,9 +5,9 @@ import './bootstrap.min.css';
 import AuthorQuiz from './components/AuthorQuiz'
 function App() {
   return (
-    <div className="App">
+    <div>
         <AuthorQuiz></AuthorQuiz>
-          Learn React
+           Learn React Train
     </div>
   );
 }

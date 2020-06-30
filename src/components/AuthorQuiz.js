@@ -12,7 +12,6 @@ export default function AuthorQuiz() {
         <div className="container  col-10 -1">
             <Header header={header} />
             <Turn />
-            <Footer footer={footer} />
         </div>
 
     )

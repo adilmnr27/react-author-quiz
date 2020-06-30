@@ -10,8 +10,8 @@ import Continue from './Continue';
 
 export default function Turn(props) {
 
-    
-    var [renderAgain,setRenderAgain] = React.useState(false);  //to render the page again
+
+    var [renderAgain, setRenderAgain] = React.useState(false);  //to render the page again
     var books = shuffledBooks(booksList.books);
     var book = getRandomBook(books);
     function getHighlightColor(author) {
@@ -43,36 +43,41 @@ export default function Turn(props) {
         return sample(books);
     }
 
-    function continueClicked(){
+    function continueClicked() {
         //Is called when continue button is clicked
         //updating the state so that it will render the turn component again.
         //doesnt matter the value os true or false as long as the value is changing
-       setRenderAgain(!renderAgain)
+        setRenderAgain(!renderAgain)
     }
 
-    function addBook(book={}){
+    function addBook(book = {}) {
         booksList.books.push(book);
     }
 
     return (
-        <div className="container">
-            <div className="row turn col-10 -1" style={{ backgroundColor: "white" }}>
-                <div className="col-4">
-                    <h2><BookName name={book.name} /></h2>
-                </div>
-                <div className="col-6">
-                    <h2>{authors()}</h2>
-                </div>
-            </div>
-            <div className="container col=10 -1">
-                <div className="col-4">
-                <Link to="/add-Book">Add Book</Link>
-                </div>
-                <div className="col-6">
-                    <Continue continueClicked={continueClicked} />
+        <>
+            <div className="turnContainer">
+                <div className="row turn col-10 -1" style={{ backgroundColor: "white" }}>
+                    <div className="col-4">
+                        <h2><BookName name={book.name} /></h2>
+                    </div>
+                    <div className="col-6">
+                        <h2>{authors()}</h2>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className="belowTurnContainer">
+                <div className="row col-10 -1">
+                    <div className="col-4">
+                        <Link role="button" className="btn btn-primary" to="/add-Book">Add Book</Link>
+                    </div>
+                    <div className="col-6">
+                        <Continue continueClicked={continueClicked} />
+                    </div>
+                </div>
+            </div>
+        </>
+
 
 
     )
